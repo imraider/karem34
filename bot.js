@@ -529,7 +529,7 @@ client.on('roleCreate', role => {
         let exec = audit.entries.map(a => a.executor.username)
         try {
 
-          let log = role.guild.channels.find('name', 'calog');
+          let log = role.guild.channels.find('name', 'log');
           if (!log) return;
           let embed = new Discord.RichEmbed()
             .setTitle('إنشاء رتبة جديدة')
@@ -562,7 +562,7 @@ client.on('roleCreate', role => {
         let exec = audit.entries.map(a => a.executor.username)
         try {
 
-          let log = role.guild.channels.find('name', 'calog');
+          let log = role.guild.channels.find('name', 'log');
           if (!log) return;
           let embed = new Discord.RichEmbed()
             .setColor('#005857')          
@@ -599,7 +599,7 @@ client.on('roleCreate', role => {
       .then(audit => {
         let exec = audit.entries.map(a => a.executor.username);
         try {
-          let log = guild.channels.find('name', 'calog');
+          let log = guild.channels.find('name', 'log');
           if (!log) return;
           client.fetchUser(member.id).then(myUser => {
           let embed = new Discord.RichEmbed()
@@ -630,7 +630,7 @@ client.on('roleCreate', role => {
       .then(audit => {
         let exec = audit.entries.map(a => a.executor.username);
         try {
-          let log = guild.channels.find('name', 'calog');
+          let log = guild.channels.find('name', 'log');
           if (!log) return;
           client.fetchUser(member.id).then(myUser => {
           let embed = new Discord.RichEmbed()
@@ -654,7 +654,7 @@ client.on('roleCreate', role => {
 
 
 
-const developers = ["504801046728671238"]
+const developers = ["514857011113099289"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
